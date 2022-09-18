@@ -4,11 +4,10 @@
         <div class="hidden md:flex gap-6 items-center font-bold">
             <div><a href="{{ route('team') }}">Equipo</a></div>
             <div><a href="{{ route('proposal') }}">Propuesta</a></div>
-            <div><a href="#">Servicios</a></div>
-            <div><a href="#">Tratamientos</a></div>
-            <div><a href="#">Glosario de Sintomas</a></div>
-            <div><a href="#">Contacto</a></div>
-{{--            <div><a href="{{ route('catalogo') }}">Catálogo de Pruebas</a></div>--}}
+            <div><a href="{{ route('services') }}">Servicios</a></div>
+            <div><a href="{{ route('treatments') }}">Tratamientos</a></div>
+            <div><a href="{{ route('symptoms') }}">Glosario de Sintomas</a></div>
+            <div><a href="{{ route('contact') }}">Contacto</a></div>
         </div>
     </div>
 </div>

@@ -3,9 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ env('APP_NAME') }}</title>
+    <title>@yield('title', env('APP_NAME'))</title>
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    @yield('inline-styles')
 </head>
 <body class="bg-white text-black">
 <div id="app">
