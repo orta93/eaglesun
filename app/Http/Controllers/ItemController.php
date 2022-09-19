@@ -19,7 +19,8 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         $name = $request->get('name');
-        $slug = str_replace(' ', '-', strtolower($this->removeAccents($name)));
+        $slug = str_replace('/ ', '', strtolower($this->removeAccents($name)));
+        $slug = str_replace(' ', '-', strtolower($slug));
 
         $body = str_replace("\r\n", "<br>", $request->get('body'));
         $body = str_replace("<br><br><br>", "<br><br>", $body);
@@ -34,6 +35,7 @@ class ItemController extends Controller
         $body = str_replace("</h2>", '</h3>', $body);
         $body = str_replace("<h3><strong>", '<h3>', $body);
         $body = str_replace("</strong></h3>", '</h3>', $body);
+        $body = str_replace("Neurocenter", env('APP_NAME'), $body);
         //$body = str_replace("<p><strong>", '<h3>', $body);
         //$body = str_replace("</strong></p>", '</h3>', $body);
 

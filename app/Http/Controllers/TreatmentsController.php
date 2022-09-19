@@ -17,7 +17,7 @@ class TreatmentsController extends Controller
     public function show($treatment_slug)
     {
         if ($category = Category::where('type', 'tratamiento')->where('slug', $treatment_slug)->first()) {
-            $items = Item::where('category_id', $category)->get();
+            $items = Item::where('category_id', $category->id)->get();
             return view('treatments-detail', ['treatment' => $category, 'items' => $items]);
         }
 

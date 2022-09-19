@@ -32,19 +32,23 @@
             <div class="w-full md:w-1/4 flex flex-col md:flex-row gap-12">
                 <div class="flex flex-col">
                     <div class="font-bold">Menu</div>
-                    <div><a href="#">Servicios</a></div>
-                    <div><a href="#">Propuesta</a></div>
-                    <div><a href="#">Equipo</a></div>
-                    <div><a href="#">Tratamientos</a></div>
-                    <div><a href="#">Glosario de Sintomas</a></div>
-                    <div><a href="#">Contacto</a></div>
+                    <div><a href="{{ route('team') }}">Equipo</a></div>
+                    <div><a href="{{ route('proposal') }}">Propuesta</a></div>
+                    <div><a href="{{ route('services') }}">Servicios</a></div>
+                    <div><a href="{{ route('treatments') }}">Tratamientos</a></div>
+                    <div><a href="{{ route('symptoms') }}">Glosario de Sintomas</a></div>
+                    <div><a href="{{ route('contact') }}">Contacto</a></div>
                 </div>
             </div>
             <div class="w-full md:w-1/4 flex flex-col md:flex-row gap-12">
                 <div class="flex flex-col">
                     <div class="font-bold">Síguenos</div>
-                    <div><a href="#">Facebook</a></div>
-                    <div><a href="#">Instagram</a></div>
+                    @if (env('FACEBOOK_HANDLE', '') != '')
+                        <div><a target="_blank" href="https://www.facebook.com/{{ env('FACEBOOK_HANDLE') }}">Facebook</a></div>
+                    @endif
+                    @if (env('INSTAGRAM_HANDLE', '') != '')
+                        <div><a target="_blank" href="https://www.instagram.com/{{ env('INSTAGRAM_HANDLE') }}">Instagram</a></div>
+                    @endif
                 </div>
             </div>
         </div>

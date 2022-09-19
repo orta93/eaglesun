@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <label>Contact Title</label>
-                            <input name="contact_title" class="form-control" value="¿Quieres empezar tu tratamiento?"/>
+                            <input name="contact_title" class="form-control" value="Dejemos atrás el dolor, empieza hoy tu tratamiento."/>
                         </div>
                         <div class="form-group">
                             <label>Contact Subtitle</label>

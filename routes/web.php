@@ -35,7 +35,7 @@ Route::get('/contacto', function () {
 })->name('contact');
 
 Route::get('/item/create', function () {
-    $categories = Category::where('type', 'servicio')->where('id', '>', 5)->get();
+    $categories = Category::where('type', 'tratamiento')->where('id', '>', 16)->get();
     return view('create-item', ['categories' => $categories]);
 });
 Route::post('/item/create', [ItemController::class, 'store']);

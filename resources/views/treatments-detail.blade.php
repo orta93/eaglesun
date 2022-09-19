@@ -6,7 +6,7 @@
     <div class="container my-8">
         <ul class="font-semibold text-lg text-blue-hover">
             @foreach($items as $item)
-                <li><a href="{{ route('treatments_detail', $item->slug) }}">{{ $item->title }}</a></li>
+                <li><a href="{{ route('item', $item->slug) }}">{{ $item->title }}</a></li>
             @endforeach
         </ul>
     </div>
