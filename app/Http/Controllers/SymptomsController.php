@@ -11,7 +11,7 @@ class SymptomsController extends Controller
     {
         $symptoms = Symptom::orderBy('name')->get();
 
-        return view('symptoms', ['symptoms' => $symptoms, 'letter' => null]);
+        return view('symptoms', ['symptoms' => $symptoms->groupBy('capital'), 'letter' => null]);
     }
 
     public function store(Request $request)

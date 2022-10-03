@@ -9,6 +9,10 @@ class Symptom extends Model
 {
     use HasFactory;
 
+    protected $appends = [
+        'capital'
+    ];
+
     protected $fillable = [
         'name',
         'slug',
@@ -19,4 +23,9 @@ class Symptom extends Model
     protected $casts = [
         'diseases' => 'array'
     ];
+
+    public function getCapitalAttribute()
+    {
+        return substr($this->name, 0, 1);
+    }
 }

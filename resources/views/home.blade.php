@@ -25,7 +25,7 @@
             </div>
 
             <div class="mt-4">
-                <a href="#" class="rounded-full bg-blue-primary hover:bg-blue-hover text-white font-bold p-4">Ver glosario de síntomas</a>
+                <a href="{{ route('symptoms') }}" class="rounded-full bg-blue-primary hover:bg-blue-hover text-white font-bold p-4">Ver glosario de síntomas</a>
             </div>
         </div>
         <div class="w-full">

@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       container: {
-        center: true
+        center: true,
+        padding: '1rem'
       },
       colors: {
         'blue-primary': '#50d6e2',

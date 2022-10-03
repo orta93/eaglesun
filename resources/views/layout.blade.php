@@ -54,7 +54,7 @@
         }
     </style>
 </head>
-<body class="bg-white text-black">
+<body class="bg-gray-50 text-gray-800">
 <div id="app">
     @include('partials.header')
     @yield('content')
