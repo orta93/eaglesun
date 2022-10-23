@@ -8,7 +8,9 @@ module.exports = {
       },
       colors: {
         'blue-primary': '#50d6e2',
-        'blue-hover': '#337985'
+        'blue-hover': '#337985',
+        'orange-es': '#f5bb14',
+        'blue-es': '#3092cf',
       }
     },
   },

@@ -21,13 +21,15 @@
 @section('content')
     @include('partials.item_title', ['title' => $item->title, 'helper' => $item->title, 'type' => $item->category->type == 'servicio' ? 'Conoce sobre' : 'Tratamiento'])
 
+    @if($item->category->type !== 'servicio')
     <div class="container flex flex-col gap-3">
         <div class="font-bold text-2xl">¿Aún no estás seguro de tu diagnóstico?</div>
         <div>Recuerda que siempre puedes encuentra padecimientos por sus síntomas.</div>
         <div class="mt-6">
-            <a href="{{ route('symptoms') }}" class="rounded-full bg-blue-primary hover:bg-blue-hover text-white font-bold p-4">Encontrar padecimiento en base a síntomas</a> 
+            <a href="{{ route('symptoms') }}" class="rounded-full bg-blue-primary hover:bg-blue-hover text-white font-bold p-4">Encontrar padecimiento en base a síntomas</a>
         </div>
     </div>
+    @endif
 
     <div class="item-container container mt-14 mb-12 pt-4 border-t-2 border-blue-primary">
         {!! $item->body !!}

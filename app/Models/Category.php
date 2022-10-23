@@ -12,7 +12,8 @@ class Category extends Model
     protected $fillable = [
         'description',
         'slug',
-        'type'
+        'type',
+        'enabled'
     ];
 
     public function items()

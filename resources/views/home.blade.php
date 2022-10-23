@@ -1,6 +1,8 @@
 @extends('layout')
 
 @section('content')
+    <div class="font-bold rounded-xl my-8 container text-center font-sans text-5xl py-16 bg-gradient-to-r from-orange-es to-blue-es">¡BIENVENIDOS A LA FAMILIA EAGLE SUN!</div>
+
     <div class="container flex flex-col md:flex-row gap-y-10 items-center my-20">
         <div class="w-full flex flex-col gap-2">
             <div class="text-xl">

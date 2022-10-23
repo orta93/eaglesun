@@ -1,31 +1,35 @@
 @extends('layout')
 
 @section('content')
-    @include('partials.item_title', ['title' => 'contamos con un equipo de especialistas para atenderte', 'type' => 'Cuidar y recuperar tu salud es nuestra prioridad,', 'helper' => 'Nuestro equipo'])
+    @include('partials.item_title', [
+        'title' => 'Contamos con un equipo de especialistas para brindarte la mejor atención/ una atención de calidad.',
+        'type' => 'Nos enfocamos en mejorar la calidad de vida a través de un enfoque integrador de neurodesarrollo.',
+        'helper' => 'Nuestro equipo'
+    ])
 
     @php
     $people = [
         [
-            'title' => 'Dr. De La O',
+            'title' => 'Laura Marchán. Coordinadora terapéutica.',
             'image' => '/images/doctor.png',
             'specialties' => [
-                'Pediatría',
-                'Neurología'
+                'Terapeuta ocupacional',
+                'Certificada en Neurodesarrollo e Integración Sensorial'
             ],
             'body' => [
-                'Médico especialista en Pediatría, cuenta con alta especialidad en Neurología Pediátrica, así como experiencia en la atención de casos neurológicos y trastornos del sueño. Cursó sus estudios de medicina en la Universidad de Monterrey (UDEM) de donde se graduó con Beca de Excelencia Académica, por su méritos académicos, realizando su especialidad en el Hospital Christus Muguerza. La subespecialidad en Neurología Pediátrica la realizó en el Instituto Tecnológico de Estudios Superiores de Monterrey (ITESM).'
+//                'Médico especialista en Pediatría, cuenta con alta especialidad en Neurología Pediátrica, así como experiencia en la atención de casos neurológicos y trastornos del sueño. Cursó sus estudios de medicina en la Universidad de Monterrey (UDEM) de donde se graduó con Beca de Excelencia Académica, por su méritos académicos, realizando su especialidad en el Hospital Christus Muguerza. La subespecialidad en Neurología Pediátrica la realizó en el Instituto Tecnológico de Estudios Superiores de Monterrey (ITESM).'
             ],
             'individuals' => [
-                'Neurología pediátrica',
-                'Trastornos del sueño',
-                'Urgencias neurológicas',
-                'Trastorno del lenguaje',
-                'Trastorno por déficit de atención e hiperactividad (TDAH)',
-                'Retraso del desarrollo psicomotor',
-                'Autismo',
-                'Epilepsia',
-                'Migraña',
-                'Parálisis cerebral'
+//                'Neurología pediátrica',
+//                'Trastornos del sueño',
+//                'Urgencias neurológicas',
+//                'Trastorno del lenguaje',
+//                'Trastorno por déficit de atención e hiperactividad (TDAH)',
+//                'Retraso del desarrollo psicomotor',
+//                'Autismo',
+//                'Epilepsia',
+//                'Migraña',
+//                'Parálisis cerebral'
             ]
         ]
     ];
