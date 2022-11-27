@@ -44,18 +44,18 @@ Route::group(['prefix' => '/servicios'], function () {
     Route::get('/{service_slug}', [ServicesController::class, 'show'])->name('services_detail');
 });
 
-Route::group(['prefix' => '/sintomas'], function () {
+/*Route::group(['prefix' => '/sintomas'], function () {
     Route::get('/create', function () {
         return view('create-symptom');
     });
     Route::post('/create', [SymptomsController::class, 'store']);
     Route::get('/', [SymptomsController::class, 'index'])->name('symptoms');
     Route::get('/{initial}', [SymptomsController::class, 'initial'])->name('symptoms_initial');
-});
+});*/
 
-Route::group(['prefix' => '/tratamientos'], function () {
+/*Route::group(['prefix' => '/tratamientos'], function () {
     Route::get('/', [TreatmentsController::class, 'index'])->name('treatments');
     Route::get('/{treatment_slug}', [TreatmentsController::class, 'show'])->name('treatments_detail');
-});
+});*/
 
 Route::get('/{item_slug}', [ItemController::class, 'show'])->name('item');

@@ -39,24 +39,28 @@
                     @endforeach
                 </div>
             </div>
-            <div class="dropdown">
-                <a href="{{ route('treatments') }}" class="dropbtn">Tratamientos</a>
-                <div class="dropdown-content">
-                    @foreach ($treatments as $treatment)
-                        <div class="submenu-container relative">
-                            <a href="{{ route('treatments_detail', $treatment->slug) }}">{{ $treatment->description }}</a>
-                              <ul class="dropdown-submenu flex flex-col flex flex-col">
-                                @foreach ($treatment->items as $item)
-                                    <div class="submenu-option px-2 py-1">
-                                        <a href="{{ route('item', $item->slug) }}">{{ $item->title }}</a>
-                                    </div>
-                                @endforeach
+            @if(Route::has('treatments'))
+                <div class="dropdown">
+                    <a href="{{ route('treatments') }}" class="dropbtn">Tratamientos</a>
+                    <div class="dropdown-content">
+                        @foreach ($treatments as $treatment)
+                            <div class="submenu-container relative">
+                                <a href="{{ route('treatments_detail', $treatment->slug) }}">{{ $treatment->description }}</a>
+                                <ul class="dropdown-submenu flex flex-col flex flex-col">
+                                    @foreach ($treatment->items as $item)
+                                        <div class="submenu-option px-2 py-1">
+                                            <a href="{{ route('item', $item->slug) }}">{{ $item->title }}</a>
+                                        </div>
+                                    @endforeach
                                 </ul>
-                        </div>
-                    @endforeach
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
-            </div>
-            <div><a href="{{ route('symptoms') }}">Glosario de Sintomas</a></div>
+            @endif
+            @if(Route::has('symptoms'))
+                <div><a href="{{ route('symptoms') }}">Glosario de Sintomas</a></div>
+            @endif
             <div><a href="{{ route('contact') }}">Contacto</a></div>
         </div>
     </div>

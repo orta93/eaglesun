@@ -1,7 +1,9 @@
 @extends('layout')
 
 @section('content')
-    <div class="font-bold rounded-xl my-8 container text-center font-sans text-5xl py-16 bg-gradient-to-r from-orange-es to-blue-es">¡BIENVENIDOS A LA FAMILIA EAGLE SUN!</div>
+    <div class="font-bold rounded-xl my-8 w-full flex container text-center font-sans text-5xl py-16 justify-center">
+        <img src="{{ asset('/images/eaglesun-welcome.png') }}"/>
+    </div>
 
     <div class="container flex flex-col md:flex-row gap-y-10 items-center my-20">
         <div class="w-full flex flex-col gap-2">
@@ -25,10 +27,11 @@
             <div class="text-4xl font-bold">
                 Úsalos para encontrar padecimientos relacionados
             </div>
-
-            <div class="mt-4">
-                <a href="{{ route('symptoms') }}" class="rounded-full bg-blue-primary hover:bg-blue-hover text-white font-bold p-4">Ver glosario de síntomas</a>
-            </div>
+            @if(Route::has('symptoms'))
+                <div class="mt-4">
+                    <a href="{{ route('symptoms') }}" class="rounded-full bg-blue-primary hover:bg-blue-hover text-white font-bold p-4">Ver glosario de síntomas</a>
+                </div>
+            @endif
         </div>
         <div class="w-full">
             <img src="/images/sintomas.jpg" class="rounded-2xl w-full shadow-2xl"/>

@@ -35,8 +35,12 @@
                     <div><a href="{{ route('team') }}">Equipo</a></div>
                     <div><a href="{{ route('proposal') }}">Propuesta</a></div>
                     <div><a href="{{ route('services') }}">Servicios</a></div>
-                    <div><a href="{{ route('treatments') }}">Tratamientos</a></div>
-                    <div><a href="{{ route('symptoms') }}">Glosario de Sintomas</a></div>
+                    @if(Route::has('treatments'))
+                        <div><a href="{{ route('treatments') }}">Tratamientos</a></div>
+                    @endif
+                    @if(Route::has('symptoms'))
+                        <div><a href="{{ route('symptoms') }}">Glosario de Sintomas</a></div>
+                    @endif
                     <div><a href="{{ route('contact') }}">Contacto</a></div>
                 </div>
             </div>
