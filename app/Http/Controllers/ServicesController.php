@@ -10,7 +10,7 @@ class ServicesController extends Controller
 {
     public function index()
     {
-        $services = Category::where('type', 'servicio')->get();
+        $services = Category::where('type', 'servicio')->where('enabled', true)->get();
         return view('services', ['services' => $services]);
     }
 
